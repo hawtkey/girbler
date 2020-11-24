@@ -34,7 +34,7 @@
 
     - name: create the RHEL8 instance
       gcp_compute_instance:
-        name: rhel8
+        name: centos8
         machine_type: n1-standard-1
         disks:
         - auto_delete: 'true'
@@ -50,6 +50,6 @@
         project: "{{ gcp_project }}"
         auth_kind: "{{ gcp_cred_kind }}"
         state: present
-    - name: Show RHEL8 Instance Details
+    - name: Show centos8 Instance Details
       debug:
-        msg: "The RHEL8 instance is accessible at {{ address.address }}"
+        msg: "The centos8 instance is accessible at {{ address.address }}"
