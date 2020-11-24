@@ -4,7 +4,7 @@
      gcp_project: vpn-project-296608
      gcp_cred_kind: serviceaccount
   tasks:
-    - name: create a disk mapped from RHEL8 image
+    - name: create a disk mapped from CentOS8 image
       gcp_compute_disk:
         name: disk-instance
         size_gb: 20
@@ -32,9 +32,9 @@
         state: present
       register: address
 
-    - name: create the RHEL8 instance
+    - name: create the CentOS8 instance
       gcp_compute_instance:
-        name: rhel8
+        name: CentOS8
         machine_type: n1-standard-1
         disks:
         - auto_delete: 'true'
@@ -50,6 +50,6 @@
         project: "{{ gcp_project }}"
         auth_kind: "{{ gcp_cred_kind }}"
         state: present
-    - name: Show RHEL8 Instance Details
+    - name: Show CentOS8 Instance Details
       debug:
-        msg: "The RHEL8 instance is accessible at {{ address.address }}"
+        msg: "The CentOS8 instance is accessible at {{ address.address }}"
