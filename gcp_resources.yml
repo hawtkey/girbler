@@ -17,7 +17,7 @@
 
     - name: create a  VPC network
       gcp_compute_network:
-        name: network-instance
+        name: default
         project: "{{ gcp_project }}"
         auth_kind: "{{ gcp_cred_kind }}"
         state: present
