@@ -4,7 +4,7 @@
      gcp_project: vpn-project-296608
      gcp_cred_kind: serviceaccount
   tasks:
-    - name: create a disk mapped from RHEL8 image
+    - name: create a disk mapped from centos8 image
       gcp_compute_disk:
         name: disk-instance
         size_gb: 20
@@ -32,7 +32,7 @@
         state: present
       register: address
 
-    - name: create the RHEL8 instance
+    - name: create the centos8 instance
       gcp_compute_instance:
         name: centos8
         machine_type: n1-standard-1
