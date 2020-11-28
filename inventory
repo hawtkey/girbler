@@ -1,0 +1,5 @@
+plugin: gcp_compute
+projects:
+  - vpn-project-296608
+auth_kind: serviceaccount
+service_account_file: /home/han/gcp_login.json
