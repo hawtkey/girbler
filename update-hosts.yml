@@ -1,7 +1,5 @@
 ---
 - hosts: all
-  remote_user: hawkey_gmail_com
-  ansible_user: hawkey_gmail_com
   tasks:
   - name: Update all packages to their latest version
     become: true
