@@ -1,4 +1,0 @@
-plugin: gcp_compute
-projects:
-  - vpn-project-296608
-auth_kind: serviceaccount
