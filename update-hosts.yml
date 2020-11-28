@@ -1,9 +1,9 @@
 ---
 - hosts: all
-  become: true
 
   tasks:
   - name: Update all packages to their latest version
+    become: true
     package:
       name: "*"
       state: latest
