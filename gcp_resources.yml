@@ -34,7 +34,7 @@
 
     - name: create the centos8 instance
       gcp_compute_instance:
-        name: centos8
+        name: "centos8-{{ 999 | random | to_uuid }}"
         machine_type: n1-standard-1
         disks:
         - auto_delete: 'true'
