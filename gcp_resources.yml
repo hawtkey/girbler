@@ -6,7 +6,7 @@
   tasks:
     - name: create a disk mapped from centos8 image
       gcp_compute_disk:
-        name: disk-instance
+        name: "disk-instance-{{ 999 | random | to_uuid }}"
         size_gb: 20
         source_image: projects/centos-cloud/global/images/centos-8-v20201112
         zone: us-west1-b
@@ -25,7 +25,7 @@
 
     - name: create an IPv4 public IP Address
       gcp_compute_address:
-        name: address-instance
+        name: "address-instance-{{ 999 | random | to_uuid }}"
         region: us-west1
         project: "{{ gcp_project }}"
         auth_kind: "{{ gcp_cred_kind }}"
