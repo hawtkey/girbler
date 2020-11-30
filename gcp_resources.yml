@@ -1,7 +1,7 @@
 - name: Create a GCP instance
   hosts: localhost
   vars:
-     gcp_project: vpn-project-296608
+     gcp_project: e_e
      gcp_cred_kind: serviceaccount
   tasks:
     - name: create a disk mapped from centos8 image
